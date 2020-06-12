@@ -45,7 +45,7 @@ function toggleHearder(){
         $navBar.classList.add('max-nav');
         $navBar.classList.remove('min-nav');
         $menu.firstElementChild.classList.add('max-hamburger');
-        $menu.firstElementChild.classList.remove('min-hamburger');
+        $menu.firstElementChild.classList.remove('min-hamburger');      
     }
 }
 $menu.addEventListener('click', toggleMenu,false);
