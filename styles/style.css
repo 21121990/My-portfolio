@@ -6,6 +6,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    font-family: bold "Taxi Driver";
 }
 
 li{
@@ -29,7 +30,7 @@ header{
 }
 .min-header{
     background-color: #95A9D1;
-    height: 80px;
+    height: 100px;
 }
 .container{
     max-width: 1200px;
@@ -114,8 +115,8 @@ header{
 }
 .ghost{
     width: 100%;
-    height: 100px;
-    background-color:  #cae1f1;
+    height: 105px;
+    background-color:  #ffffff;
 }
 @media (max-width: 768px){
 
@@ -221,21 +222,54 @@ header{
 }
 main{
     font-size: 20px;
-}
-main section{
+    grid-template-areas: 
+        "MenuLeft Main";
+        
+    grid-template-columns: auto 1fr auto;
     display: grid;
+}
+main section{    
+    display: grid;
+    grid-area:Main;
     justify-content: center;
     align-content: center;
     font-family: "Taxi Driver";
     font-size: 2em;
     color: #2574a9;
+    padding: 0%;
+    
 }
 main section:nth-child(odd){
     height: 100vh;
-    background-color: #cae1f1;
+    background-color: #ffffff;
 }
 
 main section:nth-child(even){
     height: 100vh;
-    background-color: #b7d5eb;
+    background-color: #ffffff;
+}
+.MainLeft{    
+    position: fixed;
+    grid-area:MenuLeft;
+    display: grid;
+    width: 250px;
+    height: 100%;
+   
+}
+.MainLeft ul {
+    list-style-type: none;
+  padding-top: 20px;
+  width: 250px;
+  background-color: #f57200;;
+}
+
+.MainLeft ul li a{
+    display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.MainLeft ul li a:hover{
+    background-color: #95A9D1;
+    color: white;
 }
