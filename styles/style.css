@@ -116,7 +116,9 @@ header{
 .ghost{
     width: 100%;
     height: 105px;
-    background-color:  #ffffff;
+    background-color: #f57200;;
+    position: fixed;
+   
 }
 @media (max-width: 768px){
 
@@ -222,11 +224,10 @@ header{
 }
 main{
     font-size: 20px;
-    grid-template-areas: 
-        "MenuLeft Main";
-        
+    grid-template-areas: "MenuLeft Main";        
     grid-template-columns: auto 1fr auto;
     display: grid;
+    
 }
 main section{    
     display: grid;
@@ -235,41 +236,66 @@ main section{
     align-content: center;
     font-family: "Taxi Driver";
     font-size: 2em;
-    color: #2574a9;
-    padding: 0%;
-    
-}
-main section:nth-child(odd){
-    height: 100vh;
-    background-color: #ffffff;
+    color: #2574a9; 
+    margin-left: 225px;
+    height: 1000px;
 }
 
-main section:nth-child(even){
-    height: 100vh;
-    background-color: #ffffff;
-}
 .MainLeft{    
     position: fixed;
     grid-area:MenuLeft;
     display: grid;
-    width: 250px;
+    width: 225px;
     height: 100%;
+    margin-top: 105px;    
+    background-color: #f57200; 
    
 }
 .MainLeft ul {
     list-style-type: none;
-  padding-top: 20px;
-  width: 250px;
-  background-color: #f57200;;
+    padding-top: 20px;
+    width: 225px;   
 }
-
 .MainLeft ul li a{
     display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
 }
+
 .MainLeft ul li a:hover{
     background-color: #95A9D1;
     color: white;
+}
+.MainLeftHidden{
+    position: fixed;
+    grid-area:MenuLeft;
+    display: grid;
+    width: 30px;
+    height: 100%;
+    margin-top: 105px;    
+    background-color: #f57200; 
+}
+.MainLeftHidden ul {
+    list-style-type: none;
+    padding-top: 20px;
+    width: 30px;   
+}
+.MainLeftHidden ul li a{
+    display: none;
+    color: #000;
+    text-decoration: none;
+}
+.MainLeftHidden ul li a:hover{
+    background-color: #95A9D1;
+    color: white;
+}
+#MainLeftBtn{
+    float: right;   
+    height: 80px;
+    width: 30px;
+    position:relative;
+    top: 50px;
+    border: hidden;
+    background-color: #030C1F;
 }

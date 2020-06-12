@@ -2,6 +2,26 @@ const $header = document.querySelector('header');
 const $logo = document.querySelectorAll('.logo')[0]; //pega os valores da classe
 const $navBar = document.querySelectorAll('.nav-bar')[0];
 const $menu = document.querySelectorAll('.menu')[0];
+const $MenuLeft = document.querySelector('.MainLeft');
+const $MenuLeftBtn = document.querySelector('#MainLeftBtn');
+const $positionSectionJS = document.querySelector("#positionSectionJS");
+
+$MenuLeftBtn.addEventListener('click', Hidden, false);
+function Hidden(){
+    if($MenuLeft.classList.contains('MainLeft')){
+        $MenuLeft.classList.remove('MainLeft');
+        $MenuLeft.classList.add('MainLeftHidden');
+        $MenuLeftBtn.setAttribute('style','top:200px;');
+        $MenuLeftBtn.firstElementChild.setAttribute('src','imgs/SetaDireita.png');
+        $positionSectionJS.setAttribute('style', 'margin-left: 30px;')
+    }else{
+        $MenuLeft.classList.add('MainLeft');        
+        $MenuLeft.classList.remove('MainLeftHidden');  
+        $MenuLeftBtn.setAttribute('style','top:50px;');
+        $MenuLeftBtn.firstElementChild.setAttribute('src','imgs/SetaEsquerda.png');
+        $positionSectionJS.setAttribute('style', 'margin-left: 225px;')
+    }
+}
 
 window.addEventListener('scroll', toggleHearder,false);
 function toggleHearder(){
