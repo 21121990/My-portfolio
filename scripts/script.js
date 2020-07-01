@@ -11,13 +11,13 @@ function Hidden(){
     if($MenuLeft.classList.contains('MainLeft')){
         $MenuLeft.classList.remove('MainLeft');
         $MenuLeft.classList.add('MainLeftHidden');
-        $MenuLeftBtn.setAttribute('style','top:200px;');
+        $MenuLeftBtn.setAttribute('style','top:220px;');
         $MenuLeftBtn.firstElementChild.setAttribute('src','imgs/SetaDireita.png');
         $positionSectionJS.setAttribute('style', 'margin-left: 30px;')
     }else{
         $MenuLeft.classList.add('MainLeft');        
         $MenuLeft.classList.remove('MainLeftHidden');  
-        $MenuLeftBtn.setAttribute('style','top:50px;');
+        $MenuLeftBtn.setAttribute('style','top:100px;');
         $MenuLeftBtn.firstElementChild.setAttribute('src','imgs/SetaEsquerda.png');
         $positionSectionJS.setAttribute('style', 'margin-left: 225px;')
     }
@@ -28,7 +28,7 @@ function toggleHearder(){
     if(window.pageYOffset > 60 && $header.classList.contains('max-header')){
         $header.classList.remove('max-header');
         $header.classList.add('min-header');
-        $logo.firstElementChild.setAttribute('src','imgs/omnitech-logo-2.png');
+        $logo.firstElementChild.setAttribute('src','imgs/produtiva-logo-2.png');
         $logo.classList.remove('max-logo');
         $logo.classList.add('min-logo');
         $navBar.classList.remove('max-nav');
@@ -39,7 +39,7 @@ function toggleHearder(){
     }else if(window.pageYOffset <= 60 && $header.classList.contains('min-header')){
         $header.classList.add('max-header');
         $header.classList.remove('min-header')
-        $logo.firstElementChild.setAttribute('src','imgs/omnitech-logo-1.png');
+        $logo.firstElementChild.setAttribute('src','imgs/produtiva-logo-1.png');
         $logo.classList.add('max-logo');
         $logo.classList.remove('min-logo');
         $navBar.classList.add('max-nav');
