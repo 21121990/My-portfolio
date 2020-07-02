@@ -4,7 +4,13 @@ const $navBar = document.querySelectorAll('.nav-bar')[0];
 const $menu = document.querySelectorAll('.menu')[0];
 const $MenuLeft = document.querySelector('.MainLeft');
 const $MenuLeftBtn = document.querySelector('#MainLeftBtn');
-const $positionSectionJS = document.querySelector("#positionSectionJS");
+var $positionSectionJS = document.querySelector("#positionSectionJS");
+debugger
+var divlog = document.querySelector("#divLogo")
+var logo = document.createElement("img");
+logo.src =("imgs/produtiva-logo-1.png");
+divlog.appendChild(logo);
+
 
 $MenuLeftBtn.addEventListener('click', Hidden, false);
 function Hidden(){
